@@ -7,10 +7,10 @@
 #define N 10
 
 int main() {
-    int i, c, b, a[N], oper, n1 = 0, comp = 1;
+    int i, c, b, a[N], oper, n1 , comp = 1;
     double n2;
-
     do {
+
         printf("Write type (1-write 2-random): ");
         scanf_s("%d", &oper);
 
@@ -45,7 +45,7 @@ int main() {
         if (b < 0 || b > N) { printf("\nNulevogo elementa ne naydeno"); }//поиск нулевого элемента
 
 
-
+        n1=0;
         for (c = 0; c < N; c++) { n1 += (a[c]); }
         printf("\nSumma: %d\n", n1);//сумма элементов массива
 
@@ -58,8 +58,11 @@ int main() {
                 if (a[i] < n2) comp *= a[i];
 
             }
-            printf("Proizvedenie: %d", comp);}//произведение
-        else(printf("Netu elementov posle poslednego nulevogo elementa ili netu nulevogo elementa\n"));
-    }
+            printf("Proizvedenie: %d\n", comp);}//произведение
+
+            if(b==N-1){printf("Oshibka!!Netu elementov posle poslednego nulevogo elementa,poprobuyte zanovo\n");}
+
+            if(b<0 || b>N){printf("Oshibka!!!Netu nulevogo elementa, poprobuyte zanovo\n");}
+                                                                                               }
     while( b < 0 || b > N || b==N-1);
 }
