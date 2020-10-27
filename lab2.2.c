@@ -4,44 +4,46 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define N 10
+
 int main() {
-    int i,c,b,a[10],oper,n1=0,comp=1;
-    double n2;
+int i,c,b,a[N],oper,n1=0,comp=1;
+double n2;
 
-    printf("Write type (1-write 2-random): ");
-    scanf_s("%d", &oper);
+printf("Write type (1-write 2-random): ");
+scanf_s("%d", &oper);
 
-    switch (oper){
+switch (oper){
 
-        case 1:   printf("Enter 10 numbers\n");
-               for (i = 0; i < 10; i++){
-                     printf("%d. ", i);
-                     scanf_s("%d", &a[i]);}
-               for (i = 0; i < 10; i++){
-                     printf("%d  ", a[i]);}
-               break;
-
-
-        case 2 :
-               for (i = 0; i < 10; i++){
-                     a[i] = rand() %10;
-                     printf("%d  ", a[i]);}}
+case 1: printf("Enter %d numbers\n",N);
+for (i = 0; i < N; i++){
+printf("%d. ", i);
+scanf_s("%d", &a[i]);}
+for (i = 0; i < N; i++){
+printf("%d ", a[i]);}
+break;
 
 
-        for (b = 10; b >= 0; b--) {
-               if (a[b] == 0) {printf("\nNomer nulevogo elementa %d",b);
-               break;}}///поиск нулевого элемента
+case 2 :
+for (i = 0; i < N; i++){
+a[i] = rand() %10;
+printf("%d ", a[i]);}}
 
 
-        for(c=0; c<10 ;c++){  n1 += (a[c]);}
-        printf("\nSumma: %d\n",n1);///сумма элементов массива
+for (b = N; b >= 0; b--) {
+if (a[b] == 0) {printf("\nNomer nulevogo elementa %d",b);
+break;}}///поиск нулевого элемента
 
 
-        n2 =(double) n1/10;
-        printf("Srednee arifm: %Lf\n",n2);///среднее арифтетическое
+for(c=0; c<N ;c++){ n1 += (a[c]);}
+printf("\nSumma: %d\n",n1);///сумма элементов массива
 
 
-    for (i=b+1; i<10; i++){
-        if (a[i] < n2) comp *= a[i];}
+n2 =(double) n1/N;
+printf("Srednee arifm: %Lf\n",n2);///среднее арифтетическое
+
+
+for (i=b+1; i<N; i++){
+if (a[i] < n2) comp *= a[i];}
 printf("Proizvedenie: %d",comp);///произведение
 }
