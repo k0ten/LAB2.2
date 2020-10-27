@@ -42,25 +42,23 @@ int main() {
                 break;
             }
         }
-        if (b < 0 || b > N) { printf("\nNulevogo elementa ne naydeno"); }
-        ///поиск нулевого элемента
+        if (b < 0 || b > N) { printf("\nNulevogo elementa ne naydeno"); }//поиск нулевого элемента
 
 
 
         for (c = 0; c < N; c++) { n1 += (a[c]); }
-        printf("\nSumma: %d\n", n1);///сумма элементов массива
+        printf("\nSumma: %d\n", n1);//сумма элементов массива
 
 
         n2 = (double) n1 / N;
-        printf("Srednee arifm: %Lf\n", n2);///среднее арифтетическое
+        printf("Srednee arifm: %Lf\n", n2);//среднее арифтетическое
 
         if (b != N - 1 && b > 0 && b < N) {
             for (i = b + 1; i < N; i++) {
                 if (a[i] < n2) comp *= a[i];
 
             }
-            printf("Proizvedenie: %d", comp);
-        }///произведение
+            printf("Proizvedenie: %d", comp);}//произведение
         else(printf("Netu elementov posle poslednego nulevogo elementa ili netu nulevogo elementa\n"));
     }
     while( b < 0 || b > N || b==N-1);
