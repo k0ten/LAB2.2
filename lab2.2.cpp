@@ -60,9 +60,9 @@ int main() {
             }
             printf("Proizvedenie: %d\n", comp);}//произведение
 
-            if(b==N-1){printf("Oshibka!!Netu elementov posle poslednego nulevogo elementa,poprobuyte zanovo\n");}
+        if(b==N-1){printf("Oshibka!!Netu elementov posle poslednego nulevogo elementa,poprobuyte zanovo\n");}
 
-            if(b<0 || b>N){printf("Oshibka!!!Netu nulevogo elementa, poprobuyte zanovo\n");}
-                                                                                               }
+        if(b<0 || b>N){printf("Oshibka!!!Netu nulevogo elementa, poprobuyte zanovo\n");}
+    }
     while( b < 0 || b > N || b==N-1);
 }
